@@ -269,7 +269,7 @@ stages:
 ## Web App
 
 <p align="center">
-	<img src="templates/index.html" alt="Web App Screenshot" />
+	<img src="images/website.png" alt="Web App Screenshot" />![alt text](image.png)
 	<br><i>Upload MRI scans and get instant predictions!</i>
 </p>
 
