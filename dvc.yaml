@@ -19,3 +19,20 @@ stages:
       - LEARNING_RATE
     outs:
       - artifacts/prepare_base_model
+
+  training:
+    cmd: python3 src/brainTumorMRIClassification/pipeline/stage_03_training.py
+    deps:
+      - src/brainTumorMRIClassification/pipeline/stage_03_training.py
+      - src/brainTumorMRIClassification/components/prepare_callback.py
+      - config/config.yaml
+      - artifacts/data_ingestion/brain-mri
+      - artifacts/prepare_base_model
+    params:
+      - IMAGE_SIZE
+      - EPOCHS
+      - BATCH_SIZE
+      - AUGMENTATION
+      - SEED
+    outs:
+      - artifacts/training/brain_model.h5
