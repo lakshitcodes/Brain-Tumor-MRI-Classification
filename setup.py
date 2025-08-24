@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "Brain-Tumor-MRI-Classification"
 AUTHOR_USER_NAME = "lakshitcodes"
-SRC_REPO = "Brain-Tumor-MRI-Classification"
+SRC_REPO = "brainTumorMRIClassification"
 AUTHOR_EMAIL = "jainlakshit849@gmail.com"
 
 setuptools.setup(
