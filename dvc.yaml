@@ -6,3 +6,16 @@ stages:
       - params.yaml
     outs:
       - artifacts/data_ingestion/brain-mri
+
+  prepare_base_model:
+    cmd: python3 src/brainTumorMRIClassification/pipeline/stage_02_prepare_base_model.py
+    deps:
+      - src/brainTumorMRIClassification/pipeline/stage_02_prepare_base_model.py
+      - config/config.yaml
+    params:
+      - IMAGE_SIZE
+      - CLASSES
+      - CLASSES
+      - LEARNING_RATE
+    outs:
+      - artifacts/prepare_base_model
