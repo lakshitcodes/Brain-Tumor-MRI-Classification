@@ -9,6 +9,7 @@ from brainTumorMRIClassification.entity.config_entity import (
     PrepareBaseModelConfig,
     PrepareCallbacksConfig,
     TrainingConfig,
+    EvaluationConfig,
 )
 
 
@@ -83,4 +84,13 @@ class ConfigurationManager:
             param_image_size=params.IMAGE_SIZE,
             param_learning_rate=params.LEARNING_RATE,
             param_seed=params.SEED,
+        )
+
+    def get_validation_config(self) -> EvaluationConfig:
+        return EvaluationConfig(
+            path_of_model=Path("artifacts/training/brain_model.h5"),
+            training_data=Path("artifacts/data_ingestion/brain-mri/Training"),
+            all_params=self.params,
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE,
         )
