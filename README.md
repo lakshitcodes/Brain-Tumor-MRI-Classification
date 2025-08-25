@@ -21,6 +21,10 @@
 - [Web App](#web-app)
 - [Contact](#contact)
 
+-## Live Demo
+[🌐 Try the Live Brain Tumor MRI Classifier Here](http://ec2-13-60-15-42.eu-north-1.compute.amazonaws.com:8080/)
+[Alternate Link](http://13.60.15.42:8080/)
+
 ---
 
 ## Project Overview
